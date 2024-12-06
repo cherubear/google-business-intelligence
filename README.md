@@ -8,6 +8,8 @@ You are interviewing for a job with Google Fiber, which provides people and busi
 
 To provide the interviewers with both BI value and organizational data maturity, you will use your knowledge of the BI stages: capture, analyze, and monitor. By the time you are done, you will have an end-of-course project that demonstrates your knowledge and skills to potential employers.
 
+## Initiation: Understanding Requirements and Formulating Strategies
+
 [Stakeholder requirements document](https://docs.google.com/document/d/1MOYPn7O9xY-tTu7Pap2xpral1mweDx8NGhPTttFpV1k/edit?usp=sharing)
 
 [Project requirements document](https://docs.google.com/document/d/1Ki9HJlPlBBAfrskhHqk3vH_12x27NkKCiVzfeTsyUxg/edit?usp=sharing)
