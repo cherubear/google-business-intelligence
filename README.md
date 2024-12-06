@@ -63,3 +63,52 @@ These three data tables have the same fields, so we can use a simple `UNION ALL`
 |`new_type`| Label for type of issue | String | |
 |`new_market`| Label for city service area | String | |
 
+```
+CREATE TABLE fiber.market_all AS
+SELECT
+  *
+FROM (
+  SELECT
+    date_created,
+    contacts_n,
+    CASE WHEN contacts_n_1="null" THEN '0' ELSE contacts_n_1 END AS contacts_n_1,
+    CASE WHEN contacts_n_2="null" THEN '0' ELSE contacts_n_2 END AS contacts_n_2,
+    CASE WHEN contacts_n_3="null" THEN '0' ELSE contacts_n_3 END AS contacts_n_3,
+    CASE WHEN contacts_n_4="null" THEN '0' ELSE contacts_n_4 END AS contacts_n_4,
+    CASE WHEN contacts_n_5="null" THEN '0' ELSE contacts_n_5 END AS contacts_n_5,
+    CASE WHEN contacts_n_6="null" THEN '0' ELSE contacts_n_6 END AS contacts_n_6,
+    CASE WHEN contacts_n_7="null" THEN '0' ELSE contacts_n_7 END AS contacts_n_7,
+    new_type,
+    new_market
+  FROM `rugged-nucleus-443907-r9.fiber.market_1`
+  UNION ALL
+  SELECT
+    date_created,
+    contacts_n,
+    CASE WHEN contacts_n_1="null" THEN '0' ELSE contacts_n_1 END AS contacts_n_1,
+    CASE WHEN contacts_n_2="null" THEN '0' ELSE contacts_n_2 END AS contacts_n_2,
+    CASE WHEN contacts_n_3="null" THEN '0' ELSE contacts_n_3 END AS contacts_n_3,
+    CASE WHEN contacts_n_4="null" THEN '0' ELSE contacts_n_4 END AS contacts_n_4,
+    CASE WHEN contacts_n_5="null" THEN '0' ELSE contacts_n_5 END AS contacts_n_5,
+    CASE WHEN contacts_n_6="null" THEN '0' ELSE contacts_n_6 END AS contacts_n_6,
+    CASE WHEN contacts_n_7="null" THEN '0' ELSE contacts_n_7 END AS contacts_n_7,
+    new_type,
+    new_market
+  FROM `rugged-nucleus-443907-r9.fiber.market_2`
+  UNION ALL
+  SELECT
+    date_created,
+    contacts_n,
+    CASE WHEN contacts_n_1="null" THEN '0' ELSE contacts_n_1 END AS contacts_n_1,
+    CASE WHEN contacts_n_2="null" THEN '0' ELSE contacts_n_2 END AS contacts_n_2,
+    CASE WHEN contacts_n_3="null" THEN '0' ELSE contacts_n_3 END AS contacts_n_3,
+    CASE WHEN contacts_n_4="null" THEN '0' ELSE contacts_n_4 END AS contacts_n_4,
+    CASE WHEN contacts_n_5="null" THEN '0' ELSE contacts_n_5 END AS contacts_n_5,
+    CASE WHEN contacts_n_6="null" THEN '0' ELSE contacts_n_6 END AS contacts_n_6,
+    CASE WHEN contacts_n_7="null" THEN '0' ELSE contacts_n_7 END AS contacts_n_7,
+    new_type,
+    new_market
+  FROM `rugged-nucleus-443907-r9.fiber.market_3`
+  )
+
+```
